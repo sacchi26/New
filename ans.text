@@ -1,0 +1,142 @@
+Ans1 
+for loop
+while loop
+do-while loop
+foreach loop
+
+Ans2
+for (int i = 0; i < 5; i++)
+{
+    Console.WriteLine(i);
+}
+
+Ans3 
+int i = 0;
+while (i < 5)
+{
+    Console.WriteLine(i);
+    i++;
+}
+
+Ans4
+while checks condition first, do-while executes at least once.
+
+Ans5
+The loop never executes.
+
+Ans6
+int[] numbers = {1, 2, 3};
+foreach (int num in numbers)
+{
+    Console.WriteLine(num);
+}
+
+Ans7 
+Not allowed because foreach operates on readonly iteration variables.
+Use for loop to modify elements.
+
+Section 2: Intermediate Questions
+
+Ans1 
+for (;;) { }
+while (true) { }
+do { } while (true);
+
+Ans2
+for (int i = 0; i < 5; i++)
+{
+    if (i == 3) break;
+    Console.WriteLine(i);
+}
+
+Ans3
+for (int i = 0; i < 5; i++)
+{
+    if (i == 2) continue;
+    Console.WriteLine(i);
+}
+
+Ans4
+bool exit = false;
+for (int i = 0; i < 3; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+        if (i == 1 && j == 1)
+        {
+            exit = true;
+            break;
+        }
+        Console.WriteLine($"i={i}, j={j}");
+    }
+    if (exit) break;
+}
+
+Ans5
+break exits only the loop.
+return exits the entire method.
+
+Ans6 
+int[] numbers = { 10, 20, 30 };
+foreach (int num in numbers)
+{
+    Console.WriteLine(num);
+}
+
+Ans7 
+int[] arr = { 10, 5, 20, 3 };
+int min = arr[0], max = arr[0];
+foreach (int num in arr)
+{
+    if (num < min) min = num;
+    if (num > max) max = num;
+}
+Console.WriteLine($"Min: {min}, Max: {max}");
+
+Section 3: Advanced Questions
+
+Ans1 
+Yes, using for(;;) { }.
+
+Ans2 
+void RecursiveLoop(int i)
+{
+    if (i >= 5) return;
+    Console.WriteLine(i);
+    RecursiveLoop(i + 1);
+}
+RecursiveLoop(0);
+
+Ans3
+int i = 0;
+loopStart:
+Console.WriteLine(i++);
+if (i < 5) goto loopStart;
+
+Ans4
+IEnumerator<int> enumerator = numbers.GetEnumerator();
+while (enumerator.MoveNext())
+{
+    Console.WriteLine(enumerator.Current);
+}
+
+Ans5
+Yes, when modifying elements.
+
+Ans6 
+Use parallel processing.
+
+Minimize unnecessary iterations.
+
+Cache array length.
+
+Ans7
+Avoid modifying collections during iteration.
+
+Use for instead of foreach for modification.
+
+Use Parallel.ForEach for heavy computation.
+
+Ans8
+Parallel.ForEach executes iterations in parallel.
+
